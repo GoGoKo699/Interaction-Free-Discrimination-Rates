@@ -1,0 +1,23 @@
+# Interaction-Free Discrimination Rates
+
+This project constructs a fixed binary channel pair with N-query absorption 1/(2^N+1) under either hypothesis and unconditional equal-prior error 1/[2(2^N+1)]. It explains the safe-action geometry, a precise correction to a published inverse-N rate statement, and the resources that the ideal law leaves visible.
+
+## Canonical scientific routes
+
+- Question, hypotheses, event definition and complete claim map: science/model.md
+- One-photon seed, common controls, all-N proof and full output states: science/exponential_protocol.md
+- Finite exact-zero obstruction with arbitrary causal controls and memory: science/zero_absorption.md
+- All-cross-block fidelity bound, sufficient inverse-N condition and the published diagnostic: science/rate_geometry.md
+- Passive implementation, sample passage, precision, apparatus loss and sample-loss floor: science/resources.md
+- Primary attribution and differences between operational tasks: references/RELATED_WORK.md
+- Bibliographic identities and versions: references/references.bib
+- Reproduction commands, tested cases and finite-check limitations: verification/README.md
+- Executable full-channel checks: verification/run_all.py
+
+## Essential distinctions
+
+The occupied reference mode r is different from the physical vacuum f. The no-event branch is used for analysis only; the experiment uses every run and has no access to environmental event records. Controls are common under the unknown hypothesis but change with query number. Absorption is not sample passage or apparatus occupancy. The exact transparent modes and precision schedule are assumptions, not experimentally established performance.
+
+The inverse-N theorem requires cross-inner-product preservation by safe actions. Its condition is sufficient, not necessary, and a failed condition alone does not prove an exponential protocol. Hasenöhrl–Wolf's general feasibility theory, quantum comb descriptions, Gram-matrix completion and fidelity machinery are prior ingredients. The contribution is the explicit exponential law, its rate-geometry explanation and the precisely scoped correction.
+
+For a direct proof route, read model, exponential_protocol, zero_absorption, rate_geometry and resources in that order. Use related work to check imported ingredients and operational comparisons. No optimal exponent, complete classification, continuous-parameter sensing advantage or zero-traversal claim is established.
