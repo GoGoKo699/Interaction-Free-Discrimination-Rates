@@ -57,10 +57,10 @@ For the fixed four-dimensional pair,
 
 ```math
 \begin{aligned}
-S_A&=\operatorname{span}\{f,r,a\},&
-S_B&=\operatorname{span}\{f,r,b\},\\
-V&=S_A\cap S_B=\operatorname{span}\{f,r\},&
-V^\perp&=\operatorname{span}\{a,b\}.
+S_A&=\mathrm{span}\{f,r,a\},&
+S_B&=\mathrm{span}\{f,r,b\},\\
+V&=S_A\cap S_B=\mathrm{span}\{f,r\},&
+V^\perp&=\mathrm{span}\{a,b\}.
 \end{aligned}
 ```
 
@@ -97,10 +97,10 @@ The fidelity decreases by q. However, for $`P_a=|a\rangle\langle a|`$ and $`P_b=
 
 ```math
 \begin{aligned}
-\operatorname{tr}(P_aR)&=q,&
-\operatorname{tr}(P_aS)&=0,\\
-\operatorname{tr}(P_bR)&=0,&
-\operatorname{tr}(P_bS)&=q.
+\mathrm{tr}(P_aR)&=q,&
+\mathrm{tr}(P_aS)&=0,\\
+\mathrm{tr}(P_bR)&=0,&
+\mathrm{tr}(P_bS)&=q.
 \end{aligned}
 ```
 
@@ -118,7 +118,7 @@ P_aDP_b&=|a\rangle\langle b|\ne0.
 \end{aligned}
 ```
 
-The operator D vanishes on the common safe space $`\operatorname{span}\{f,r\}`$. Although $`P_aP_b=0`$, this does not imply $`P_aDP_b=0`$. Retaining the cross block gives the missing contribution q exactly.
+The operator D vanishes on the common safe space $`\mathrm{span}\{f,r\}`$. Although $`P_aP_b=0`$, this does not imply $`P_aDP_b=0`$. Retaining the cross block gives the missing contribution q exactly.
 
 ### Consequence for the written rate theorem
 
@@ -147,7 +147,7 @@ The following lemma keeps all blocks. It also allows ancillary systems and subno
 **Lemma.** Let $`W_A,W_B:\mathcal H\to\mathcal E\otimes\mathcal H_{\rm out}`$ be contractions, and define
 
 ```math
-\mathcal E_X(R)=\operatorname{tr}_{\mathcal E}(W_XRW_X^\dagger).
+\mathcal E_X(R)=\mathrm{tr}_{\mathcal E}(W_XRW_X^\dagger).
 ```
 
 Suppose that on a subspace V with projector P they agree and are isometric:
@@ -164,8 +164,8 @@ Put $`D_W=I-W_A^\dagger W_B`$. Let $`P_1,\ldots,P_m`$ be pairwise orthogonal pro
           \widehat{\mathcal E}_B(S))\\
 &\quad\le
 \sum_{k,l=1}^m\|P_kD_WP_l\|\,
-\sqrt{\operatorname{tr}(P_kR_{\mathcal H})\,
-      \operatorname{tr}(P_lS_{\mathcal H})}.
+\sqrt{\mathrm{tr}(P_kR_{\mathcal H})\,
+      \mathrm{tr}(P_lS_{\mathcal H})}.
 \end{aligned}
 ```
 
@@ -176,8 +176,8 @@ The one-block version is
 &F(R,S)-F(\widehat{\mathcal E}_A(R),
           \widehat{\mathcal E}_B(S))\\
 &\quad\le\|D_W\|
-\sqrt{\operatorname{tr}[(I-P)R_{\mathcal H}]\,
-      \operatorname{tr}[(I-P)S_{\mathcal H}]}.
+\sqrt{\mathrm{tr}[(I-P)R_{\mathcal H}]\,
+      \mathrm{tr}[(I-P)S_{\mathcal H}]}.
 \end{aligned}
 ```
 
@@ -207,8 +207,8 @@ Insert $`\sum_kP_k`$ on both sides of $`D_W`$. Each term obeys
 &\le\|P_kD_WP_l\|\,\|(P_k\otimes I)\Psi\|\,
                          \|(P_l\otimes I)\Phi\|\\
 &=\|P_kD_WP_l\|\,
-\sqrt{\operatorname{tr}(P_kR_{\mathcal H})\,
-      \operatorname{tr}(P_lS_{\mathcal H})}.
+\sqrt{\mathrm{tr}(P_kR_{\mathcal H})\,
+      \mathrm{tr}(P_lS_{\mathcal H})}.
 \end{aligned}
 ```
 
@@ -294,15 +294,15 @@ For positive joint inputs R, S with trace at most one, use the purifications in 
 &F(R,S)-F(K_AR K_A^\dagger,K_BS K_B^\dagger)\\
 &\quad\le\|D\|
 \left[
-\sqrt{\operatorname{tr}(Q_AR_{\mathcal H})\,\operatorname{tr}S}
+\sqrt{\mathrm{tr}(Q_AR_{\mathcal H})\,\mathrm{tr}\,S}
 +
-\sqrt{\operatorname{tr}R\,\operatorname{tr}(Q_BS_{\mathcal H})}
+\sqrt{\mathrm{tr}\,R\,\mathrm{tr}(Q_BS_{\mathcal H})}
 \right]\\
 &\quad\le\|D\|
 \left[
-\sqrt{\frac{\operatorname{tr}(G_AR_{\mathcal H})}{\gamma_A}}
+\sqrt{\frac{\mathrm{tr}(G_AR_{\mathcal H})}{\gamma_A}}
 +
-\sqrt{\frac{\operatorname{tr}(G_BS_{\mathcal H})}{\gamma_B}}
+\sqrt{\frac{\mathrm{tr}(G_BS_{\mathcal H})}{\gamma_B}}
 \right].
 \end{aligned}
 ```
@@ -314,14 +314,14 @@ The no-event operators in this display act as the identity on every ancillary re
 Let $`\tau_{X,j}`$ be the subnormalized joint input to call j obtained by applying the no-event operation at every earlier call. These are analysis objects; the experiment does not observe or select them. The first-event probability at that call is
 
 ```math
-\ell_{X,j}=\operatorname{tr}[(G_X\otimes I)\tau_{X,j}].
+\ell_{X,j}=\mathrm{tr}[(G_X\otimes I)\tau_{X,j}].
 ```
 
 Because all common controls are trace preserving,
 
 ```math
 p_X=\sum_{j=1}^N\ell_{X,j}
-   =1-\operatorname{tr}\tau_{X,\mathrm{fin}}.
+   =1-\mathrm{tr}\,\tau_{X,\mathrm{fin}}.
 ```
 
 Root fidelity cannot decrease under a common CPTP control, also for subnormalized states. The initial shared normalized state has fidelity one with itself. Telescope the one-call estimate through the strategy and apply Cauchy–Schwarz:
@@ -346,9 +346,9 @@ The full accessible outputs include every event history. Since the difference be
 Root fidelity is monotone in each positive argument in the Loewner order. For example, $`S'\ge S`$ implies
 
 ```math
-\operatorname{tr}\sqrt{\sqrt R\,S'\sqrt R}
+\mathrm{tr}\,\sqrt{\sqrt R\,S'\sqrt R}
 \ge
-\operatorname{tr}\sqrt{\sqrt R\,S\sqrt R},
+\mathrm{tr}\,\sqrt{\sqrt R\,S\sqrt R},
 ```
 
 and symmetry gives monotonicity in R. Consequently,
@@ -426,7 +426,7 @@ UP_A=K_AP_A,\qquad UP_B=K_BP_B.
 
 ```math
 \|K_Ax-K_Bx\|^2
-=2\|x\|^2-2\operatorname{Re}\langle K_Ax,K_Bx\rangle=0.
+=2\|x\|^2-2\mathrm{Re}\,\langle K_Ax,K_Bx\rangle=0.
 ```
 
 It therefore defines a well-defined linear map on the sum:
@@ -459,8 +459,8 @@ Indeed, inner products involving V are preserved because the maps agree there an
 For the exponential pair,
 
 ```math
-U_A=\operatorname{span}\{a\},\qquad
-U_B=\operatorname{span}\{b\},\qquad
+U_A=\mathrm{span}\{a\},\qquad
+U_B=\mathrm{span}\{b\},\qquad
 K_Aa=a,\qquad K_Bb=-a.
 ```
 
