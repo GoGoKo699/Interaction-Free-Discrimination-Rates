@@ -39,7 +39,13 @@ Start with the [question, model and exact claims](science/model.md), then follow
 | Inherited tools and nearby operational tasks | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 | Full-channel calculations and their limits | [Verification](verification/README.md) |
 
-[The LLM reading guide](llms.txt) maps scientific questions to their authoritative files.
+## Learn the project
+
+The single educational anchor is **John Watrous, *Understanding Quantum Information and Computation*, the author’s July 2025 “Director’s Cut.”** The [Watrous bridge](learning/BRIDGE.md) identifies the relevant lessons, translates their notation into this experiment, and works through a complete two-query example. It then connects the example to the exact protocol, the fidelity argument and the physical resource limits.
+
+The [30-milestone map](learning/MILESTONES.md) develops the project in two phases: **13 background/preliminaries milestones** establish the operational framework, and **17 narrative/innovation milestones** connect the protocol, rate arguments and physical boundaries. Each phase moves from individual objects and mechanisms to their combined meaning. Every milestone states its understanding target, dependencies, conceptual connection and source pointers.
+
+Use the bridge alongside the map for self-directed study. [The LLM reading guide](llms.txt) maps scientific and learning questions to their authoritative files. Specialists can follow the direct proof route above.
 
 ## Reproduce the finite checks
 

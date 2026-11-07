@@ -14,10 +14,20 @@ This project constructs a fixed binary channel pair with N-query absorption 1/(2
 - Reproduction commands, tested cases and finite-check limitations: verification/README.md
 - Executable full-channel checks: verification/run_all.py
 
+## Learning route
+
+The single educational anchor is John Watrous, Understanding Quantum Information and Computation, the author's July 2025 Director's Cut at https://jhwatrous.github.io/UQIC.pdf. Its lessons on density matrices, channels, general measurements, purifications and fidelity supply the foundation. Watrous's 2018 Theory of Quantum Information remains a cited research-level reference, not a second educational anchor.
+
+- Anchor sections, notation translation, complete two-query example and the missing source-to-project steps: learning/BRIDGE.md
+- Exactly 30 project-defined understanding targets, ordered within background/preliminaries and narrative/innovation phases: learning/MILESTONES.md
+- Exact assumptions and canonical statements for every learning explanation: science/model.md and the linked topic pages
+
+For a story route, begin with README.md and the bridge's optical example, then use the milestone map to connect that example to the full science. For a study route, follow M01 through M30 with the bridge and each milestone's source pointers. For a theorem route, use the canonical scientific files above. For reproduction, use verification/README.md and run_all.py.
+
 ## Essential distinctions
 
 The occupied reference mode r is different from the physical vacuum f. The no-event branch is used for analysis only; the experiment uses every run and has no access to environmental event records. Controls are common under the unknown hypothesis but change with query number. Absorption is not sample passage or apparatus occupancy. The exact transparent modes and precision schedule are assumptions, not experimentally established performance.
 
-The inverse-N theorem requires cross-inner-product preservation by safe actions. Its condition is sufficient, not necessary, and a failed condition alone does not prove an exponential protocol. Hasenöhrl–Wolf's general feasibility theory, quantum comb descriptions, Gram-matrix completion and fidelity machinery are prior ingredients. The contribution is the explicit exponential law, its rate-geometry explanation and the precisely scoped correction.
+The inverse-N theorem requires cross-inner-product preservation by safe actions. Its condition is sufficient; necessity is not established, and a failed condition alone does not prove an exponential protocol. Hasenöhrl–Wolf's general feasibility theory, quantum comb descriptions, Gram-matrix completion and fidelity machinery are prior ingredients. The contribution is the explicit exponential law, its rate-geometry explanation and the precisely scoped correction.
 
 For a direct proof route, read model, exponential_protocol, zero_absorption, rate_geometry and resources in that order. Use related work to check imported ingredients and operational comparisons. No optimal exponent, complete classification, continuous-parameter sensing advantage or zero-traversal claim is established.

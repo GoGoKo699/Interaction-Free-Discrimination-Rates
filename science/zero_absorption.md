@@ -13,7 +13,7 @@ Let each channel have a specified no-event operation $`\rho\mapsto K_X\rho K_X^\
 At the first call the two input states are identical. Let that joint state on system and memory be $`\omega`$. A zero event probability under X means
 
 ```math
-\operatorname{tr}\big[((I-K_X^\dagger K_X)\otimes I)\omega\big]=0.
+\mathrm{tr}\,\big[((I-K_X^\dagger K_X)\otimes I)\omega\big]=0.
 ```
 
 Both factors inside this positive expectation are positive semidefinite. Therefore the support of $`\omega`$ lies in $`S_X\otimes\mathcal H_M`$. Requiring this for both hypotheses places it in $`S\otimes\mathcal H_M`$. Agreement of the channels on all operators supported in S implies agreement after tensoring with the identity on the memory, so the two post-call states are equal.
@@ -24,7 +24,7 @@ Purifying a mixed preparation or representing intermediate measurements by a lar
 
 ## Application to the optical pair
 
-For the [two devices](model.md), the common safe space is $`\operatorname{span}\{f,r\}`$, and both channels act as the identity on it. The proposition therefore applies. It even allows controls more general than the passive, number-preserving ones used in the construction.
+For the [two devices](model.md), the common safe space is $`\mathrm{span}\{f,r\}`$, and both channels act as the identity on it. The proposition therefore applies. It even allows controls more general than the passive, number-preserving ones used in the construction.
 
 There is no contradiction between this statement and
 

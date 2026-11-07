@@ -37,7 +37,7 @@ The Stinespring isometry $`V_X\psi=X_0\psi\otimes|0\rangle_E+X_1\psi\otimes|1\ra
 For an arbitrary strategy, let $`\widetilde\rho_{X,N}`$ be its subnormalized final state obtained by retaining only the no-event operation $`\rho\mapsto X_0\rho X_0^\dagger`$ at every call. Define
 
 ```math
-p_X=1-\operatorname{tr}\widetilde\rho_{X,N}.
+p_X=1-\mathrm{tr}\,\widetilde\rho_{X,N}.
 ```
 
 This is the probability of at least one absorption event. It is not generally a count of all events. In the explicit number-preserving protocol, absorption leaves the system in f forever, so the expected absorbed-photon count equals $`p_X`$ as well.
@@ -52,9 +52,9 @@ D(\rho,\sigma)=\frac12\|\rho-\sigma\|_1.
 The safe input space of a no-event contraction $`K_X`$ is $`S_X=\ker(I-K_X^\dagger K_X)`$. For this pair,
 
 ```math
-S_A=\operatorname{span}\{f,r,a\},\qquad
-S_B=\operatorname{span}\{f,r,b\},\qquad
-S_A\cap S_B=\operatorname{span}\{f,r\}.
+S_A=\mathrm{span}\{f,r,a\},\qquad
+S_B=\mathrm{span}\{f,r,b\},\qquad
+S_A\cap S_B=\mathrm{span}\{f,r\}.
 ```
 
 The channels coincide on their common safe space. Their exclusive safe input directions a and b are orthogonal, but their safe outputs a and minus a are not orthogonal. That change of cross inner products is the useful geometric feature.

@@ -83,7 +83,7 @@ K_A=C+\sqrt\eta\,|a\rangle\langle a|,\qquad
 K_B=C-\sqrt\eta\,|a\rangle\langle b|.
 ```
 
-The missing norm is absorbed into f. For A the event Kraus operators are $`|f\rangle\langle b|`$ and $`\sqrt{1-\eta}|f\rangle\langle a|`$; for B they are $`|f\rangle\langle a|`$ and $`\sqrt{1-\eta}|f\rangle\langle b|`$. The only safe input space is now the common space $`\operatorname{span}\{f,r\}`$. The qualitative impossibility of asymptotically zero-damage discrimination in this situation is already part of Hasenöhrl–Wolf's feasibility/no-go theory. The following direct specialization gives an explicit bound for this model.
+The missing norm is absorbed into f. For A the event Kraus operators are $`|f\rangle\langle b|`$ and $`\sqrt{1-\eta}|f\rangle\langle a|`$; for B they are $`|f\rangle\langle a|`$ and $`\sqrt{1-\eta}|f\rangle\langle b|`$. The only safe input space is now the common space $`\mathrm{span}\{f,r\}`$. The qualitative impossibility of asymptotically zero-damage discrimination in this situation is already part of Hasenöhrl–Wolf's feasibility/no-go theory. The following direct specialization gives an explicit bound for this model.
 
 ### A damage floor for arbitrary strategies
 
