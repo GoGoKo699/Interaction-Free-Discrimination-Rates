@@ -50,7 +50,7 @@ Specifically, for device A, a hybrid argument between its no-event projector and
 \leq\sqrt{N p_A}.
 ```
 
-Here the first vector is the unnormalized no-event output, the second is the normalized empty-device output, and the nonnegative losses sum to p_A. Any conclusive effect that annihilates the empty output therefore has **no-absorption** A-report probability at most N p_A. A-report success bounded away from zero then requires inverse-N absorption. Counting reports on absorption branches instead adds at most p_A, giving an upper bound of (N+1)p_A unless the report effect also annihilates that sector. The [resource account](../science/resources.md#requiring-darkness-on-an-empty-device) supplies the task-boundary derivation. This is a statement about this pair and the identity empty device, not a universal exclusion from the general comb framework.
+Here the first vector is the unnormalized no-event output, the second is the normalized empty-device output, and the nonnegative losses sum to $p_A$. Any conclusive effect that annihilates the empty output therefore has **no-absorption** A-report probability at most $N p_A$. A-report success bounded away from zero then requires inverse-N absorption. Counting reports on absorption branches instead adds at most $p_A$, giving an upper bound of $(N+1)p_A$ unless the report effect also annihilates that sector. The [resource account](../science/resources.md#requiring-darkness-on-an-empty-device) supplies the task-boundary derivation. This is a statement about this pair and the identity empty device, not a universal exclusion from the general comb framework.
 
 ## Recent scalar-loss sensing comparisons
 
