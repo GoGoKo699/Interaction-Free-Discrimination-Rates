@@ -69,7 +69,7 @@ The two survivor vectors have norm at most one, so the trace distance between th
 For identical safe spaces $`S`$ and agreement there, $`D=I-K_A^\dagger K_B`$ annihilates $`S`$ on both sides. The one-query change in overlap is $`-\langle x_t|D|y_t\rangle`$. Each term is bounded in modulus by $`\|D\|\sqrt{\ell_{A,t}\ell_{B,t}/(\gamma_A\gamma_B)}`$. Consequently
 
 ```math
-1-\operatorname{Re}\langle x_N|y_N\rangle
+1-\mathrm{Re}\langle x_N|y_N\rangle
 \le \frac{\|D\|}{\sqrt{\gamma_A\gamma_B}}\sqrt{p_Ap_B}.
 ```
 
