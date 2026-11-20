@@ -1,8 +1,8 @@
 # Related work and attribution
 
-The contribution is the explicit exponential absorption law for the fixed [channel pair](../science/model.md), together with the role of the channels' safe output geometry. It is not a new definition of a quantum channel, a new framework for causal discrimination, or a new Gram-matrix completion theorem. The achieved base is not asserted to be optimal. The [construction](../science/exponential_protocol.md), [zero-absorption obstruction](../science/zero_absorption.md), [rate geometry](../science/rate_geometry.md), and [resource account](../science/resources.md) give the precise mathematical claims.
+The project classifies the [optimal interaction rates](../science/sharp_rates.md) of fixed finite-dimensional binary channel pairs with a designated common pure input vacuum and pure vacuum outputs. Its exponent is attained by a general safe-control construction. The [original optical construction](../science/exponential_protocol.md) illustrates the theorem and attains its optimal exponential factor. The channel-discrimination framework and Gram-matrix completion are inherited tools.
 
-Bibliographic records, including the preprint versions used below, are in [references.bib](references.bib). The literature comparison was last checked on 6 November 2026. It supports the stated contribution boundaries; it is not a claim of exhaustive novelty clearance.
+Bibliographic records, including the preprint versions used below, are in [references.bib](references.bib). The most relevant comparisons were refreshed on 20 November 2026. The reviewed source boundaries appear below.
 
 ## Interaction-free measurement and the physical cost
 
@@ -20,9 +20,9 @@ Theorem 5.9 states an inverse-N interaction lower bound when the channels coinci
 
 The local proof issue occurs on **printed page 3377, from Eq. (5.7) to the first line of Eq. (5.8)**. Expanding the complement projection into orthogonal blocks produces both diagonal and off-diagonal terms. Orthogonality of the projections alone does not remove a matrix between them. The proof omits the off-diagonal terms without a supporting assumption in Definition 5.1. A one-query counterexample to Proposition 5.2, including a valid common dilation, is given in [the published multiblock step](../science/rate_geometry.md#the-published-multiblock-step).
 
-This correction concerns the block inequality and the dependent rate statement. It does not establish that the paper's general feasibility criterion is false; the corresponding whole-complement argument does not make this particular block omission. The last paragraph of Section 2.1 and the open questions in Section 7 already identify faster-than-inverse-N behavior as a question requiring further understanding.
+This correction concerns the block inequality and the dependent rate statement. It does not establish that the paper's general feasibility criterion is false; the corresponding whole-complement argument does not make this particular block omission. Section 7 asks under what conditions interaction probability can decay faster than inverse-linear. The [classification](../science/sharp_rates.md) answers this for fixed finite-dimensional pairs at any fixed strict error target and gives the sharp exponent in the positive exponential regime. The compatible-case upper bound uses their Theorem 2.5, and their Theorem 2.9 supplies the established constant-floor result.
 
-A bounded search by exact title, DOI, authors, “correction,” and “erratum” found no correction as of 6 November 2026. This is a search result, not certification that no correction exists or that the authors were unaware of the issue.
+A bounded search by exact title, DOI, authors, “correction,” and “erratum” found no correction as of 20 November 2026.
 
 ## Scalar transparency, polarimetry and recursive interferometers
 
@@ -38,7 +38,7 @@ A bounded search by exact title, DOI, authors, “correction,” and “erratum�
 
 [Chaturvedi et al., *Optimal Interaction Free Localization with Multipath Interferometers*](https://arxiv.org/abs/2607.26293v1), **v1, 28 July 2026**, is a close recent comparison. Section V, Eq. (21), and Appendix C allow general completely positive trace-nonincreasing no-absorption maps, including mode mixing and polarization changes. Their general process framework can accommodate the pair studied here; it must not be described as restricted to projectors.
 
-Their exact examples use ideal projector absorbers. The two-use optimum is 27/128 without an empty reference rail and 25/72 with one, under their localization task. Appendix E also realizes coherent intermediate controls by matching Gram matrices. Neither the comb formalism nor this realization technique is claimed as new here. The additional result in this repository is the explicit repeated safe-subspace construction and its exact exponentially decreasing absorption law.
+Their exact examples use ideal projector absorbers. The two-use optimum is 27/128 without an empty reference rail and 25/72 with one, under their localization task. Appendix E also realizes coherent intermediate controls by matching Gram matrices. Neither the comb formalism nor this realization technique is claimed as new here. The additional result in this repository is a matching asymptotic binary interaction law, with the exponent determined by the two safe actions.
 
 The operational tasks also differ. Their Eq. (23) requires every conclusive report to be impossible for a specified empty-device process. The present task is binary discrimination between the two promised devices and has no third, empty-device hypothesis. For the natural empty channel equal to the identity, adding their exact darkness condition changes the achievable rate.
 
@@ -70,4 +70,4 @@ The treatment of arbitrary causal strategies by quantum memory and combs is esta
 
 The 2026 comparisons above are based on the actual primary PDFs, not solely their abstracts. For Chaturvedi et al., the inspected material includes Sections III and V, Appendix C, and the relevant exact two-use and Gram-matrix constructions in Appendix E. For the first Wildfeuer paper, the inspected material includes the scalar model, Eqs. (20)–(25), and the scope discussion on pages 7–8. For the second, it includes the Section III.A theorem and its stated hypotheses. Obtaining a full text does not mean that every theorem in it was independently verified.
 
-Hance–Rarity v2 and Wang–Pitt–Milgie were inspected in full text. The compact descriptions of the earlier scalar-transparency and Zhou–Yung works above use their primary abstracts and stated models; they do not purport to revalidate those complete proofs. The Hasenöhrl–Wolf comparison uses the published definitions, statement and proof step identified above. No earlier realization of this exact exponential absorption recurrence was located in the targeted search, and that bounded observation should not be strengthened into an exhaustive priority claim.
+Hance–Rarity v2 and Wang–Pitt–Milgie were inspected in full text. The compact descriptions of the earlier scalar-transparency and Zhou–Yung works above use their primary abstracts and stated models; they do not purport to revalidate those complete proofs. The Hasenöhrl–Wolf comparison uses the published definitions, statement and proof step identified above. The targeted comparison found no earlier classification with the matching safe-action exponent.

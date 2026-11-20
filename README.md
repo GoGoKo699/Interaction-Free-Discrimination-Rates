@@ -1,6 +1,10 @@
 # Interaction-Free Discrimination Rates
 
-**How quickly can repeated quantum interrogation identify a device while suppressing absorption?** For two fixed lossy devices, one photon and N preprogrammed interrogations achieve exponentially small absorption and unconditional discrimination error:
+**When can repeated quantum interrogation identify a device with exponentially small damage?** For two known finite-dimensional channels, the answer depends on how their safe inputs are mapped to outputs. The [optimal rate classification](science/sharp_rates.md) identifies when worst-case interaction probability is zero, exponentially small, inverse-linear, or bounded below by a constant at fixed error.
+
+## An optical example
+
+For two fixed lossy devices, one photon and N preprogrammed interrogations give
 
 ```math
 P_{\mathrm{abs}}^{A}=P_{\mathrm{abs}}^{B}
@@ -16,13 +20,13 @@ The protocol uses three one-photon modes, an absorbing vacuum and no access to t
 
 Orthogonal transparent input directions do not by themselves force an inverse-N absorption law. The construction satisfies the written hypotheses of Hasenöhrl and Wolf's rate theorem but violates its conclusion. A direct one-query counterexample identifies omitted cross terms in its supporting multiblock fidelity estimate. Their channel framework and general feasibility results remain separately credited in [Related work](references/RELATED_WORK.md).
 
-A corrected sufficient condition is also proved: **if the two safe actions preserve all cross inner products, an inverse-N lower bound holds** for arbitrary causal strategies and memories. On the same finite input/output space, this means that one unitary can extend both safe restrictions. The exponential pair fails this condition because its orthogonal transparent inputs have overlapping outputs.
+When the channels agree on their shared safe inputs, let $`L`$ be the linear map extending both safe actions and $`\sigma=\|L\|`$ its operator norm. If $`\sigma>1`$, the optimal interaction probability at fixed error is $`\Theta(\sigma^{-2N})`$ even against adaptive strategies. A common sequence of controls attains this rate, with unconditional error of the same order. The optical example has $`\sigma^2=2`$, so its exponential factor is optimal. When $`\sigma=1`$, the safe actions preserve every cross inner product and an inverse-linear lower bound holds.
 
 | Statement | Scope |
 |---|---|
 | Exponential absorption and error | Explicit ideal protocol, every integer $`N\ge1`$ |
 | No informative exactly zero-absorption strategy | Every finite query count, arbitrary common causal controls and ancillary memory |
-| Inverse-N lower bound under compatible safe actions | Sufficient geometric condition; not a complete classification |
+| Sharp rate classification | Fixed finite-dimensional channel pair, designated common input vacuum with pure outputs, and fixed strict error target |
 | Imperfection accounting | Sufficient precision budget, exact uniform apparatus-loss formula and a fixed sample-loss damage floor |
 
 ## Read the science
@@ -34,6 +38,7 @@ Start with the [question, model and exact claims](science/model.md), then follow
 | Physical channels, event definition and unconditional error | [Model](science/model.md) |
 | Seed, common controls and exact output states | [Exponential protocol](science/exponential_protocol.md) |
 | The finite exact-zero impossibility proof | [Zero absorption](science/zero_absorption.md) |
+| Optimal rates, converse and attaining controls | [Sharp rates](science/sharp_rates.md) |
 | Published cross-term issue and repaired fidelity/rate bounds | [Rate geometry](science/rate_geometry.md) |
 | Passive rotations, passage, calibration and loss | [Resources and imperfections](science/resources.md) |
 | Inherited tools and nearby operational tasks | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
@@ -41,7 +46,7 @@ Start with the [question, model and exact claims](science/model.md), then follow
 
 ## Learn the project
 
-The single educational anchor is **John Watrous, *Understanding Quantum Information and Computation*, the author’s July 2025 “Director’s Cut.”** The [Watrous bridge](learning/BRIDGE.md) identifies the relevant lessons, translates their notation into this experiment, and works through a complete two-query example. It then connects the example to the exact protocol, the fidelity argument and the physical resource limits.
+The single educational anchor is **John Watrous, *Understanding Quantum Information and Computation*, the author’s July 2025 “Director’s Cut.”** The [Watrous bridge](learning/BRIDGE.md) identifies the relevant lessons, translates their notation into this experiment, and works through a complete two-query example. It then connects the example to the rate classification, the attaining protocol and the physical resource limits.
 
 The [30-milestone map](learning/MILESTONES.md) develops the project in two phases: **13 background/preliminaries milestones** establish the operational framework, and **17 narrative/innovation milestones** connect the protocol, rate arguments and physical boundaries. Each phase moves from individual objects and mechanisms to their combined meaning. Every milestone states its understanding target, dependencies, conceptual connection and source pointers.
 
@@ -56,13 +61,13 @@ python3 -m pip install -r verification/requirements.txt
 python3 verification/run_all.py
 ```
 
-The suite propagates full density matrices through every Kraus branch, constructs controls from two-mode rotations, and checks the output states, unconditional error, absorption, passage totals, loss models and the omitted-cross-block counterexample. The written proofs establish the all-N and arbitrary-strategy claims; finite numerical agreement does not replace them.
+The suite propagates full density matrices through every Kraus branch, constructs controls from two-mode rotations, and checks the output states, unconditional error, absorption, passage totals, loss models and the omitted-cross-block counterexample. It also checks optimal safe amplification with orthogonal and nonorthogonal safe inputs. The all-N and arbitrary-strategy claims follow from the written proofs.
 
 ## Physical scope
 
 Expected sample-input passage tends to one even though absorption falls exponentially. Whole-apparatus occupancy grows approximately as N. The result concerns absorbed energy and environmental disturbance, not vanishing traversal.
 
-Exact transparent modes and calibrated controls are essential idealizations. A sufficient absolute precision schedule shrinks as $`2^{-N}/N`$ per operation. Fixed loss in the transparent sample modes creates a positive damage floor, and fixed uniform apparatus loss eventually destroys the discrimination advantage. No optimal exponential base, general classification or experimental demonstration is claimed.
+Exact transparent modes and calibrated controls are essential idealizations. A sufficient absolute precision schedule shrinks as $`2^{-N}/N`$ per operation. Fixed loss in the transparent sample modes creates a positive damage floor, and fixed uniform apparatus loss eventually destroys the discrimination advantage. The sharp classification assumes ideal pair-calibrated controls. The optical resource bounds describe a separate implementation question.
 
 ## Purpose and contact
 

@@ -10,6 +10,8 @@ import json
 from pathlib import Path
 import numpy as np
 
+from safe_amplification import check_safe_amplification
+
 if not __debug__:
     raise SystemExit("Run without -O: this scientific check suite uses assertions.")
 
@@ -264,7 +266,8 @@ def check():
     return {"status": "all assertions passed", "ideal": ideal_rows,
             "omitted_cross_block": counterexamples,
             "uniform_loop_loss": loop_rows, "known_sample_loss": sample_rows,
-            "coherent_control_perturbations": perturbation_rows}
+            "coherent_control_perturbations": perturbation_rows,
+            "safe_amplification": check_safe_amplification(tolerance)}
 
 
 if __name__ == "__main__":

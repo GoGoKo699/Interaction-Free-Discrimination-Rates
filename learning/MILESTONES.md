@@ -1,6 +1,6 @@
 # Thirty milestones for understanding interaction-free discrimination rates
 
-The scientific question is whether repeated calls to a fixed lossy device can reveal its identity while the probability of absorption falls exponentially. Understanding the answer requires following the accessible quantum state, the unobserved environmental event, and the restrictions on the controls together.
+The scientific question is what determines how fast repeated calls can identify a known pair of lossy devices while reducing the chance of absorption. Understanding the answer requires following the accessible quantum state, the unobserved environmental event, and the restrictions on the controls together.
 
 This map has exactly 30 project-defined milestones. Each records a central question, an understanding target, earlier dependencies, a conceptual connection and source pointers. The canonical statements and proofs remain in [science/](../science/model.md); the [educational bridge](BRIDGE.md#source-and-route) connects them to the selected source and supplies a [complete two-query example](BRIDGE.md#a-complete-two-query-experiment).
 
@@ -10,7 +10,7 @@ The single educational anchor is John Watrous, *Understanding Quantum Informatio
 
 The allocation is **13 milestones for background/preliminaries, M01–M13, and 17 for narrative/innovation, M14–M30**. The background connects individual modes and amplitudes to mixed states, open dynamics, event probabilities, safe spaces, measurement, fidelity and sequential control. M13 integrates those objects into the operational question.
 
-The narrative receives more space because the result combines a concrete coherent mechanism with a correction to a rate argument and several distinct physical boundaries. M14–M18 assemble the experiment from its device action, seed and common controls. M19–M24 connect finite zero absorption, the published counterexample and the repaired converse. M25–M29 connect the ideal result to resources, precision, two different loss models and a changed reporting promise. M30 integrates the contribution and its scope.
+The narrative begins with the optical experiment. M14–M18 assemble it from the device action, seed and common controls. M19–M21 explain the exact-zero obstruction and how the example tests a published rate bound. M22–M24 develop the quantity that determines the general rate, its arbitrary-strategy converse and the attaining protocol. M25–M29 connect the ideal result to resources, precision, two different loss models and a changed reporting promise. M30 brings the four rate regimes together.
 
 Anchor sections supply the foundational tools. The optical model, event convention, protocol, corrected inequalities and resource bounds are supplied by the linked project sources. Primary research attribution and proof dependencies remain in [Related work](../references/RELATED_WORK.md); they are not additional educational anchors.
 
@@ -304,55 +304,55 @@ Anchor sections supply the foundational tools. The optical model, event conventi
 
 **Central question.** What exactly does the exponential protocol disprove in the published rate theorem?
 
-**Understanding target.** Match the fixed pair to the written common-safe-action and exclusive-input-orthogonality hypotheses, then understand why no N-independent positive constant can bound its absorption by the stated inverse-N expression. Separate this failure from the feasibility characterization and constructions that remain outside the counterexample.
+**Understanding target.** Match the fixed pair to the written common-safe-action and exclusive-input-orthogonality hypotheses. Explain why no N-independent positive constant can bound its absorption by the stated inverse-N expression. Identify how the repaired one-query estimate accounts for both block indices and why its compatibility condition preserves the valid inverse-N bound. Credit the feasibility characterization and construction to Hasenöhrl and Wolf.
 
 **Dependencies and story role.** M18, M19, M20. This connects the one-query diagnostic to a global claim about every finite strategy.
 
 **Conceptual connection.** A valid rate comparison requires the same event definition, unconditional error, device pair and quantifiers, not merely similar asymptotic terminology.
 
-**Source pointers.** Anchor tools: [Watrous Lesson 11, §11.3, discrimination error][w113]; [Lesson 12, §12.2, Fidelity][w122]. Project: [rate_geometry.md — Consequence for the written rate theorem](../science/rate_geometry.md#consequence-for-the-written-rate-theorem) and [Scope](../science/rate_geometry.md#scope); primary theorem attribution: [Related work — Hasenöhrl–Wolf](../references/RELATED_WORK.md#hasenoehrl-wolf).
+**Source pointers.** Anchor: [Watrous Lesson 11, §11.3, discrimination error][w113]; [Lesson 12, §12.2, Fidelity][w122]. Project: [Consequence for the written rate theorem](../science/rate_geometry.md#consequence-for-the-written-rate-theorem) and [corrected all-cross-block estimate](../science/rate_geometry.md#a-corrected-all-cross-block-fidelity-bound). Primary theorem attribution: [Related work — Hasenöhrl–Wolf](../references/RELATED_WORK.md#hasenoehrl-wolf).
 
 ### M22
 
-**Keeping all cross blocks repairs the one-query estimate**
+**The joint map of the two safe actions**
 
-**Central question.** Which fidelity inequality survives when the omitted coherences are retained?
+**Central question.** How can two safe actions, defined on different spaces, give one number that controls the rate?
 
-**Understanding target.** Explain how purifications turn fidelity loss into a matrix element of a cross defect, why the aligned common isometric part cancels, and why inserting a block decomposition gives a sum over both block indices. Understand the role of operator norms and the applicability to ancillary and subnormalized inputs, including the valid one-block specialization.
+**Understanding target.** Align the Kraus phases using the common vacuum output and show that agreement on the intersection makes $`L(a-b)=K_Aa-K_Bb`$ well defined on the sum of the safe spaces. Explain why $`\|L\|=1`$ is equivalent to preservation of all cross inner products. Compute $`\|L\|=\sqrt{2}`$ for the optical example by checking the exclusive directions and the orthogonal shared ones.
 
-**Dependencies and story role.** M03, M05, M10, M11, M20. This replaces the local failed estimate with the ingredient needed for reliable converses.
+**Dependencies and story role.** M03, M08, M14, M20, M21. This turns the geometric defect into a quantitative measure with a calculable value for the original example.
 
-**Conceptual connection.** The repaired bound accounts for the same cross action that powers the constructive protocol.
+**Conceptual connection.** Each safe action preserves length on its own space. Their joint map can stretch a difference between inputs from different safe spaces.
 
-**Source pointers.** Anchor: [Watrous Lesson 12, §12.1, Purifications][w121] and [§12.2, Uhlmann’s theorem][w122uhlmann]; [Lesson 3, §3.2, projections][w32]. Project: [rate_geometry.md — A corrected all-cross-block fidelity bound](../science/rate_geometry.md#a-corrected-all-cross-block-fidelity-bound).
+**Source pointers.** Anchor: [Watrous Lesson 3, §3.2, orthonormal bases and projections][w32]; [Lesson 10, §10.2, Stinespring representations][w102stinespring]. Project: [Classification](../science/sharp_rates.md#classification), [optical example](../science/sharp_rates.md#optical-example-and-scope) and [interpretation as a common unitary](../science/rate_geometry.md#interpretation-as-a-common-unitary).
 
 ### M23
 
-**Compatible safe actions and one common unitary**
+**Bounding distinguishability for every common strategy**
 
-**Central question.** When do the two safe restrictions preserve the geometry needed for an inverse-N bound?
+**Central question.** How does a small total probability of an event limit the distinguishability an adaptive strategy can build?
 
-**Understanding target.** Interpret $`P_ADP_B=0`$ as preservation of every safe cross inner product, after aligning no-event Kraus phases through the common vacuum output. Explain its equivalence to extending both safe restrictions to one unitary on the same finite input/output space, and why safe-output orthogonality repairs the orthogonal-exclusive-input hypothesis.
+**Understanding target.** Track the difference of the two unnormalized no-event vectors after lifting common controls to isometries. Project each vector onto its own safe space. Explain why the joint norm controls the resulting safe output difference, while the unsafe norms are bounded by square roots of the corresponding first-event probabilities. Follow the weighted sum to the final distance and add the event branches before applying the discrimination formula.
 
-**Dependencies and story role.** M03, M08, M14, M22. This identifies the geometric assumption that will control the accumulated fidelity change.
+**Dependencies and story role.** M05, M07, M09, M10, M12, M22. This uses one inequality to connect the local geometry to the overall event budget and unconditional error.
 
-**Conceptual connection.** Compatibility is tested across the two devices’ safe maps, not merely within either map. It is a sufficient rate condition; its necessity is unestablished.
+**Conceptual connection.** When the joint norm is one, the first-event contributions add with an inverse-query cost at fixed advantage. When the norm exceeds one, early separation can grow geometrically. The converse limits even strategies that adapt through measurements and memory.
 
-**Source pointers.** Anchor: [Watrous Lesson 3, §3.2, orthonormal bases and projections][w32]; [Lesson 10, §10.2, Stinespring representations][w102stinespring]. Project: [rate_geometry.md — Interpretation as a common unitary](../science/rate_geometry.md#interpretation-as-a-common-unitary); [Repair by safe-output orthogonality](../science/rate_geometry.md#repair-by-safe-output-orthogonality); [Notation and the environmental event](../science/rate_geometry.md#notation-and-the-environmental-event).
+**Source pointers.** Anchor: [Watrous Lesson 10, §10.2, Stinespring representations][w102stinespring]; [Lesson 11, §11.3, state discrimination][w113]; [Lesson 12, §12.1, Purifications][w121]. Project: [Converse for arbitrary adaptive controls](../science/sharp_rates.md#converse-for-arbitrary-adaptive-controls).
 
 ### M24
 
-**Accumulation yields a sufficient inverse-N converse**
+**An optimal exponential protocol from a weak seed**
 
-**Central question.** How does a one-call fidelity estimate constrain the event probability of every N-call strategy?
+**Central question.** How can an arbitrarily weak first probe reach the growth rate allowed by the converse?
 
-**Understanding target.** Follow the roles of loss gaps, first-event probabilities, telescoping through common controls and Cauchy–Schwarz. Explain the passage from no-event states to full accessible outputs and then to unconditional error. Interpret the inverse-N lower bound at fixed discrimination advantage, including its fixed-pair constants and the cases of a zero defect or a vanishing event effect.
+**Understanding target.** Use a maximally stretched direction of the joint map to build two normalized safe inputs around a flagged common reference. Show how the first-order overlap-deficit gain is $`\|L\|^2`$ and why planning backward through the exact recurrence makes the multiplicative corrections summable. Follow the final safe controls that make the surviving outputs orthogonal and explain why the unconditional error is at most the maximum event probability.
 
-**Dependencies and story role.** M07, M11, M12, M22, M23. This assembles the corrected local estimate into the general conditional rate theorem.
+**Dependencies and story role.** M09, M11, M15, M16, M18, M22, M23. This generalizes the optical recurrence and matches the exponent in the converse.
 
-**Conceptual connection.** An information advantage forces cumulative overlap loss, and the compatibility condition ties that loss to an environmental-event budget.
+**Conceptual connection.** Matching the pair's overlaps makes every scheduled control common to the two hypotheses. Only the seed pays for an environmental event along the surviving history.
 
-**Source pointers.** Anchor: [Watrous Lesson 12, §12.2, monotonicity and fidelity/trace-distance bounds][w122properties]. Project: [rate_geometry.md — A sufficient inverse-N theorem](../science/rate_geometry.md#a-sufficient-inverse-n-theorem), [Proof: accumulation and unconditional outputs](../science/rate_geometry.md#proof-accumulation-and-unconditional-outputs) and [Zero-defect and zero-event cases](../science/rate_geometry.md#zero-defect-and-zero-event-cases). The primary fidelity-bound citation is retained in that proof.
+**Source pointers.** Anchor: [Watrous Lesson 1, §1.2, Unitary operations][w12unitary]; [Lesson 2, §2.2, Quantum information][w22]; [Lesson 12, §12.2, pure-state fidelity][w122]. Project: [Constructing the optimal exponential protocol](../science/sharp_rates.md#constructing-the-optimal-exponential-protocol) and [the general-rate section of the bridge](BRIDGE.md#what-determines-the-best-rate).
 
 ### M25
 
@@ -404,7 +404,7 @@ Anchor sections supply the foundational tools. The optical model, event conventi
 
 **Understanding target.** Explain how imperfect transmission removes the exclusive safe directions and leaves only the common safe space. Connect the resulting arbitrary-strategy damage floor at fixed nontrivial accuracy to the intact one-block/no-go reasoning. Distinguish that converse from the displayed calibrated schedule, its transmission-dependent behavior and its unclaimed optimality.
 
-**Dependencies and story role.** M08, M22, M24, M27. This contrasts loss that merely reduces survival with loss that changes the safe-space geometry supporting the mechanism.
+**Dependencies and story role.** M08, M22, M23, M27. The exact safe spaces determine whether loss suppresses the surviving weight or removes the geometric mechanism itself.
 
 **Conceptual connection.** Exact transparent directions are a structural assumption: perturbing them can replace an asymptotically vanishing cost by a positive floor.
 
@@ -418,7 +418,7 @@ Anchor sections supply the foundational tools. The optical model, event conventi
 
 **Understanding target.** Distinguish the known binary promise from the additional empty-device-darkness condition. Explain how comparison with the identity device yields an inverse-N absorption requirement for a nonvanishing conclusive no-absorption A-report probability, and why this statistic is not the same as every possible average-success criterion.
 
-**Dependencies and story role.** M09, M12, M18, M24. This connects the protocol to a neighboring operational task and identifies the promise responsible for the difference.
+**Dependencies and story role.** M09, M12, M18, M23. This connects the protocol to a neighboring operational task and identifies the promise responsible for the difference.
 
 **Conceptual connection.** Changing which reports are permitted can change the resource bound even when the same physical channel pair is admitted by a general framework.
 
@@ -426,17 +426,17 @@ Anchor sections supply the foundational tools. The optical model, event conventi
 
 ### M30
 
-**The complete mechanism, corrected boundary and physical scope**
+**The four rate regimes and their physical scope**
 
-**Central question.** What unified account explains both the exponential construction and the limits that remain?
+**Central question.** Given the two channels and their safe spaces, how can you predict the optimal event rate and understand what the prediction costs physically?
 
-**Understanding target.** Connect the paid initial separation, common safe control, changing cross overlap and full binary readout into the achieved exponential law. Reconcile that law with the finite exact-zero obstruction and the sufficient common-unitary inverse-N theorem. Explain which resource, calibration, loss and reporting assumptions support each conclusion, while leaving optimal rates and a complete geometry classification unestablished.
+**Understanding target.** Classify a pair at fixed equal-prior error strictly between zero and one half. Explain why distinct actions on a common safe input give zero cost, why $`\|L\|\gt1`$ gives the optimal exponential law, why compatible actions with unequal safe spaces give the inverse-query law, and why identical safe spaces with identical safe actions yield a positive floor for distinct channels. Explain why identical channels cannot be differentiated and where ideal calibration, the specific event cost and the binary promise enter.
 
-**Dependencies and story role.** M19, M21, M24, M25, M26, M27, M28, M29. This integrates the narrative into one scientific contribution with precise attribution and boundaries.
+**Dependencies and story role.** M19, M21, M22, M23, M24, M25, M26, M27, M28, M29. This links the two-query example, sharp classification and physical boundaries.
 
-**Conceptual connection.** Feasibility, convergence rate and physical usefulness depend jointly on safe input/output actions, the measured cost and the operational promise; none alone determines the whole answer.
+**Conceptual connection.** Safe input and output actions control the ideal rate within the binary promise. Changing the event definition, allowed controls or reporting task changes the physical question.
 
-**Source pointers.** Anchor synthesis: [Watrous Lesson 10, §10.2, Channel representations][w102]; [Lesson 11, §11.3, state discrimination][w113]; [Lesson 12, §12.2, Fidelity][w122]. Project: [model.md — Exact claims and their homes](../science/model.md#exact-claims-and-their-homes); [exponential_protocol.md — Why the rate is possible](../science/exponential_protocol.md#why-the-rate-is-possible); [rate_geometry.md — Scope](../science/rate_geometry.md#scope); [resources.md — What the result does and does not settle](../science/resources.md#what-the-result-does-and-does-not-settle); [Related work](../references/RELATED_WORK.md).
+**Source pointers.** Anchor: [Watrous Lesson 10, §10.2, Channel representations][w102]; [Lesson 11, §11.3, state discrimination][w113]; [Lesson 12, §12.2, Fidelity][w122]. Project: [Classification](../science/sharp_rates.md#classification), [Optical example and scope](../science/sharp_rates.md#optical-example-and-scope), [resources and imperfections](../science/resources.md) and [related work](../references/RELATED_WORK.md).
 
 [w12]: https://jhwatrous.github.io/UQIC.pdf#page=18
 [w12unitary]: https://jhwatrous.github.io/UQIC.pdf#page=24
