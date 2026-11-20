@@ -1,10 +1,11 @@
 # Interaction-Free Discrimination Rates
 
-This project constructs a fixed binary channel pair with N-query absorption 1/(2^N+1) under either hypothesis and unconditional equal-prior error 1/[2(2^N+1)]. It explains the safe-action geometry, a precise correction to a published inverse-N rate statement, and the resources that the ideal law leaves visible.
+This project classifies optimal interaction probability at fixed error for known finite-dimensional binary channel pairs with a common pure input vacuum and pure vacuum outputs. The norm of the joined safe actions determines the optimal exponential factor. The optical example has N-query absorption 1/(2^N+1) and unconditional error 1/[2(2^N+1)].
 
 ## Canonical scientific routes
 
 - Question, hypotheses, event definition and complete claim map: science/model.md
+- Sharp criterion, exact exponent, arbitrary-controller converse and attaining algorithm: science/sharp_rates.md
 - One-photon seed, common controls, all-N proof and full output states: science/exponential_protocol.md
 - Finite exact-zero obstruction with arbitrary causal controls and memory: science/zero_absorption.md
 - All-cross-block fidelity bound, sufficient inverse-N condition and the published diagnostic: science/rate_geometry.md
@@ -28,6 +29,6 @@ For a story route, begin with README.md and the bridge's optical example, then u
 
 The occupied reference mode r is different from the physical vacuum f. The no-event branch is used for analysis only; the experiment uses every run and has no access to environmental event records. Controls are common under the unknown hypothesis but change with query number. Absorption is not sample passage or apparatus occupancy. The exact transparent modes and precision schedule are assumptions, not experimentally established performance.
 
-The inverse-N theorem requires cross-inner-product preservation by safe actions. Its condition is sufficient; necessity is not established, and a failed condition alone does not prove an exponential protocol. Hasenöhrl–Wolf's general feasibility theory, quantum comb descriptions, Gram-matrix completion and fidelity machinery are prior ingredients. The contribution is the explicit exponential law, its rate-geometry explanation and the precisely scoped correction.
+For aligned vacuum outputs and agreement on the shared safe space, sigma is the operator norm of the single map extending both safe actions. If sigma>1, the optimal worst-case event rate is Theta(sigma^(-2N)), attained with unconditional error of the same order. Hasenöhrl–Wolf's feasibility theorem and inverse-linear upper bound, quantum comb descriptions and Gram-matrix completion are established tools.
 
-For a direct proof route, read model, exponential_protocol, zero_absorption, rate_geometry and resources in that order. Use related work to check imported ingredients and operational comparisons. No optimal exponent, complete classification, continuous-parameter sensing advantage or zero-traversal claim is established.
+For a direct proof route, read model, sharp_rates, exponential_protocol, rate_geometry and resources in that order. Use related work for imported ingredients and operational comparisons. The classification charges device events in a hard-cap query model with ideal and pair-calibrated controls.

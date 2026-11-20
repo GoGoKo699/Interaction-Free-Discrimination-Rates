@@ -39,4 +39,4 @@ Each member of this sequence has a strictly positive first-query absorption prob
 
 Hasenöhrl and Wolf's [channel framework](../references/RELATED_WORK.md#hasenoehrl-wolf) distinguishes asymptotically interaction-free discrimination from finite exact zero interaction. Their general feasibility characterization and Zeno constructions are credited background. The counterexample in this project concerns a particular claimed rate lower bound; it does not contradict the feasibility of making both error and interaction arbitrarily small for this pair.
 
-The proposition above is a direct finite-query support argument. It does not assert that every pair failing its premise has a zero-cost finite discriminator. That converse is neither needed nor claimed.
+The proposition is a finite-query support argument. For a fixed nontrivial target error, the [rate classification](sharp_rates.md#classification) also gives the complementary zero-cost construction when the channels have distinct vacuum outputs or disagree on a common safe input state.

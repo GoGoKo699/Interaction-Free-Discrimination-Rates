@@ -2,7 +2,7 @@
 
 Imagine sending one photon through an apparatus containing an unknown optical device. The device is promised to be one of two known alternatives, A or B. The aim is to identify it while keeping the probability that it absorbs the photon small. Reusing the apparatus permits more calls to the device, but a useful protocol must account for every lost photon and every incorrect answer.
 
-The [project's model](../science/model.md) makes this question precise. The complete two-call experiment below has absorption probability one fifth and binary error one tenth. Its generalization achieves exponentially decreasing absorption with the number of calls. Understanding why requires keeping track of the device's transparent **outputs**, the inaccessible absorption record, and the full final state.
+The [project's model](../science/model.md) makes this question precise. The complete two-call experiment below has absorption probability one fifth and binary error one tenth. Repeating its mechanism achieves exponentially decreasing absorption, at the best possible exponent for this pair. The [general rate law](../science/sharp_rates.md) explains which other pairs allow the same kind of improvement. Understanding why requires keeping track of the device's transparent **outputs**, the inaccessible absorption record, and the full final state.
 
 ## Source and route
 
@@ -206,7 +206,24 @@ The [canonical proof](../science/exponential_protocol.md) establishes these iden
 
 Exactly zero absorption at a finite N has a different consequence. Before any separation has been created, the shared input would need to lie in both safe spaces. On their intersection, spanned by f and r, the devices agree. Common controls cannot turn equal states into different states, and imposing zero absorption at every subsequent call keeps this obstruction in place. The [finite-query theorem](../science/zero_absorption.md) makes this argument precise even with ancillary memory and adaptive controls. Every member of the exponential sequence has a strictly positive first-call risk.
 
-The [sufficient inverse-N theorem](../science/rate_geometry.md#a-sufficient-inverse-n-theorem) identifies a complementary class of device pairs: their safe actions preserve all cross inner products, or equivalently extend to one common unitary after the prescribed vacuum phase alignment. Such pairs require absorption of order at least inverse N for fixed discrimination advantage. Our pair violates that compatibility condition. Its failure alone does not establish an exponential protocol for every other pair; a necessary-and-sufficient rate classification is not supplied. See [M23–M24](MILESTONES.md#m23).
+## What determines the best rate?
+
+A device's safe space consists of the inputs that give a no-event outcome with probability one. Its no-event Kraus operator preserves distances within that space. Take two devices with the same pure vacuum output and align their Kraus phases using the vacuum. If they agree on their common safe space, the two safe restrictions define one linear map $`L`$ on the sum of their safe spaces. An input difference $`a-b`$, with $`a`$ safe for A and $`b`$ safe for B, then maps under $`L`$ to the difference of the two corresponding outputs. Its operator norm $`\sigma=\|L\|`$ measures the largest amount by which the two safe actions can stretch such a vector difference.
+
+In the optical example, exclusive safe inputs a and b are orthogonal, and their outputs are a and minus a. The input difference has length $`\sqrt{2}`$, and the output difference has length 2. In fact, $`\sigma=\sqrt{2}`$: on the two exclusive directions the joint map sends coefficients $`(x,y)`$ to $`x-y`$ on a, and it acts isometrically on the orthogonal shared directions f and r. The squared stretch $`\sigma^2=2`$ matches the overlap-deficit multiplier in the explicit experiment. The example's $`2^{-N}`$ absorption exponent is therefore optimal, even when strategies may use arbitrary common adaptive controls.
+
+For fixed equal-prior error strictly between zero and one half, the [classification](../science/sharp_rates.md#classification) asks how small the larger of the two event probabilities can be after N calls. Each row has its own mechanism.
+
+| What the devices do | Best event probability at large N | Why |
+|---|---|---|
+| Give different vacuum outputs, or differ on an input safe for both | Zero | Repeating a common safe probe gives the required evidence with no event risk. |
+| Agree on the common safe space, and $`\sigma\gt1`$ | $`\Theta(\sigma^{-2N})`$ | One weak call seeds a difference. Safe calls expand it, and a converse bounds the per-call growth by $`\sigma`$ in vector distance. |
+| Agree on the common safe space, have unequal safe spaces, and $`\sigma=1`$ | $`\Theta(1/N)`$ | The safe actions preserve all cross inner products. The inverse-query construction uses a direction that is safe for just one device. |
+| Agree on their entire, identical safe space and are distinct channels | $`\Theta(1)`$ | Distinguishing information requires spending a positive event budget. |
+
+In the first row, difference on the common safe space is a difference of channel actions, observable with a suitable coherent probe. Identical channels never reach the stipulated error. The constants in the table depend on the known device pair and the target error.
+
+The [converse](../science/sharp_rates.md#converse-for-arbitrary-adaptive-controls) follows the two unnormalized no-event vectors. The components that lie outside their respective safe spaces contribute to the event budget. The parts inside those spaces contribute to distance growth through $`L`$, even with protected memory. A weighted Cauchy–Schwarz bound then limits the final vector distance, and adding the weights of the event branches bounds unconditional discrimination. The [matching construction](../science/sharp_rates.md#constructing-the-optimal-exponential-protocol) chooses a maximally stretched direction, uses a common control at each call, and plans the seed backward from the desired final separation. A final sequence of safe calls makes the surviving outputs orthogonal. The measurement still counts all runs, with error at most the larger event probability. Follow [M22–M24](MILESTONES.md#m22) for the proof dependencies and [M30](MILESTONES.md#m30) for the four cases together.
 
 ## What the physical cost means
 
@@ -230,7 +247,7 @@ The same resource page proves several consequential boundaries:
 | Loss in the nominally transparent sample modes | Fixed nonzero leakage creates a positive damage floor for fixed nontrivial discrimination accuracy, even with arbitrary common controls. See [the transparent-mode loss model](../science/resources.md#loss-in-the-nominally-transparent-sample-modes). |
 | Conclusive reports must also be impossible for an empty device | This adds a third-process constraint absent from the binary promise. For the identity empty device, [the darkness bound](../science/resources.md#requiring-darkness-on-an-empty-device) prevents retaining constant conclusive A success with exponentially low absorption. |
 
-These distinctions are developed in [M25–M29](MILESTONES.md#m25). The construction is an exact ideal model result; the resource analysis does not establish an experimental implementation or an optimal exponential base.
+These distinctions are developed in [M25–M29](MILESTONES.md#m25). The optimal exponent concerns exact channel actions and ideal calibrated controls. The resource analysis describes how the specified imperfections alter the optical example and the measurement task.
 
 ## Reading the proof dependencies
 
@@ -242,6 +259,7 @@ The course supplies the mathematical language. The project supplies the optical 
 | Exponential construction | Normalization, orthonormal columns and inner-product preservation suffice to check the recurrence. Matching Gram matrices and completing an isometry to a unitary are standard linear algebra, credited in the research references. | [Exponential protocol](../science/exponential_protocol.md) |
 | Finite exact-zero obstruction | A positive operator with zero expectation restricts the state's support; induction then covers all finite common strategies. The example alone establishes no universal obstruction. | [Zero absorption](../science/zero_absorption.md) |
 | Corrected fidelity estimate and sufficient inverse-N bound | Lesson 12 introduces purifications and Uhlmann's theorem. The project additionally handles subnormalized inputs, retains every cross block, accumulates losses across queries and connects the no-event state back to the full output. The basic fidelity properties on source p. 365 are listed without proofs; the project gives the argument needed for its rate theorem. | [All-cross-block lemma](../science/rate_geometry.md#a-corrected-all-cross-block-fidelity-bound) and [rate theorem](../science/rate_geometry.md#a-sufficient-inverse-n-theorem) |
+| Rate classification and matching exponential exponent | Lessons 3 and 10 supply orthogonal projections and dilations. The project joins the two safe restrictions on their shared domain, controls one-call vector growth, and constructs a sequence whose overlap deficit grows at the matching rate. | [Classification and proofs](../science/sharp_rates.md) |
 | Comparison with the written published rate statement | This requires the actual hypotheses and proof step of the primary research paper, beyond the educational anchor. The counterexample concerns the identified block estimate and dependent rate claim. | [Published multiblock step](../science/rate_geometry.md#the-published-multiblock-step) and [related work](../references/RELATED_WORK.md#hasenoehrl-wolf) |
 | Robustness and changed operational tasks | Instrument-level perturbation estimates, loss models and the empty-device hybrid argument require their own stated assumptions. They are not consequences of the elementary two-call calculation alone. | [Resources and imperfections](../science/resources.md) |
 

@@ -174,4 +174,4 @@ The two terms on the right are orthogonal, $`\|\alpha_{A,N}\|^2=1-p`$, and $`\la
 
 ## What the result does and does not settle
 
-The exact exponential construction, the finite zero-absorption obstruction, the sufficient inverse-N condition and the displayed resource/noise bounds are proved at their stated scope. The optimal rate over all protocols, a complete classification of safe-action geometries, and an experimental demonstration remain separate questions. The fixed known binary pair and its calibrated transparent actions are essential to the present conclusion.
+The [sharp rate classification](sharp_rates.md) proves that the optical pair's exponential factor is optimal over all ideal causal protocols. The resource and noise bounds here apply to the specified optical construction. Its fixed known binary pair and calibrated transparent actions determine the implementation analyzed above.

@@ -1,6 +1,6 @@
 # Safe-action geometry and discrimination rates
 
-The [exponential protocol](exponential_protocol.md) depends on how the two devices transform inner products between their respective safe inputs. Orthogonality of those inputs alone does not impose an inverse-N absorption law. This page isolates the missing cross term in a published bound and proves a sufficient condition under which an inverse-N law does hold.
+The [exponential protocol](exponential_protocol.md) depends on how the two devices transform inner products between their respective safe inputs. Orthogonality of those inputs alone does not impose an inverse-N absorption law. This page isolates the missing cross term in a published bound and proves a quantitative lower bound under a condition on the safe actions. The [optimal rate classification](sharp_rates.md) uses the same geometry to identify the inverse-linear and exponential regimes.
 
 The condition has a direct geometric meaning: the two safe actions must be restrictions of one common unitary. The quantitative bound allows arbitrary finite ancillary memory, measurements, classical records and adaptive common controls, and it uses the unconditional binary error.
 
@@ -474,7 +474,7 @@ That is precisely the cross action used to increase the overlap deficit without 
 
 ## Scope
 
-The theorem is sufficient, not a complete rate classification. Failure of its cross-inner-product condition does not establish an exponential protocol for every pair. The constants are not claimed optimal, and the bound concerns a fixed number or hard cap of causal calls rather than an expected call count.
+This fidelity-based theorem gives an explicit inverse-N lower bound. The [sharp rate proof](sharp_rates.md) shows that agreement on the common safe space and failure to preserve the safe cross inner products are sufficient for exponential suppression, and computes its optimal factor. Both pages use a fixed number or hard cap of causal calls.
 
 The counterexample concerns the multiblock estimate and the rate claim that uses it. It does not invalidate the one-block fidelity estimate, the general feasibility criterion for interaction-free discrimination, or the inverse-N constructions in [Hasenöhrl–Wolf](../references/RELATED_WORK.md#hasenoehrl-wolf). Scalar-transmission and other more restricted models require their own comparison; see [Related work](../references/RELATED_WORK.md).
 

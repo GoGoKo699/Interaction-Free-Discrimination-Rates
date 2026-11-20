@@ -1,6 +1,6 @@
 # Question, model and results
 
-Can repeated interrogation identify a lossy device while making the probability of absorption exponentially small in the number of calls? The answer is yes for a fixed pair of devices whose transparent input modes differ and whose transparent outputs rotate into the same mode. The same pair carries no information at exactly zero absorption for any finite number of calls.
+Can repeated interrogation identify a lossy device while making the probability of absorption exponentially small in the number of calls? The answer is yes for a fixed pair of devices whose transparent input modes differ and whose transparent outputs rotate into the same mode. The same pair carries no information at exactly zero absorption for any finite number of calls. The [optimal rate classification](sharp_rates.md) extends this example to arbitrary finite-dimensional pairs in the stated vacuum model.
 
 The physical cost here is an absorbed photon, or equivalently an environmental record different from the vacuum record. A transmitted photon can still acquire a phase or change polarization. This cost therefore does not measure whether light ever traverses the sample. The distinction is quantified in [Resources and imperfections](resources.md).
 
@@ -65,12 +65,13 @@ The channels coincide on their common safe space. Their exclusive safe input dir
 |---|---|---|
 | Exponential absorption and error | For every integer N, the explicit protocol has absorption $`p_N=(2^N+1)^{-1}`$ under either device and unconditional error $`p_N/2`$ | [Exponential protocol](exponential_protocol.md) |
 | Exact zero absorption gives no information | For every finite N, arbitrary common causal controls and ancillary memory, zero absorption under both hypotheses gives identical outputs | [Zero-absorption obstruction](zero_absorption.md) |
-| A sufficient inverse-N condition | Safe actions that preserve every cross inner product obey a quantitative inverse-N lower bound, with arbitrary memory and adaptive controls | [Rate geometry](rate_geometry.md) |
+| Rate classification and optimal exponent | For a fixed finite-dimensional pair, the joint safe actions determine the optimal interaction rate at fixed error | [Sharp rates](sharp_rates.md) |
+| A quantitative inverse-N condition | Safe actions that preserve every cross inner product obey a quantitative inverse-N lower bound, with arbitrary memory and adaptive controls | [Rate geometry](rate_geometry.md) |
 | Specific published rate claim fails | The pair satisfies the written hypotheses of Hasenöhrl–Wolf Theorem 5.9; a one-query counterexample isolates the omitted cross terms in Proposition 5.2 | [Rate geometry](rate_geometry.md#the-published-multiblock-step) |
 | Resource and noise accounting | Exact sample passage, sufficient control accuracy, and the consequence of uniform apparatus loss | [Resources and imperfections](resources.md) |
 
-The exponential base is achieved by this construction; global optimality is not claimed. The sufficient inverse-N condition is not a complete classification of all channel pairs. The exact transparent modes, known binary device promise and ideal calibrated controls are assumptions of the result. [Related work](../references/RELATED_WORK.md) identifies inherited results and the different operational tasks in nearby literature.
+The optical pair achieves the optimal exponential factor $`1/2`$ by the general classification. The exact transparent modes, known binary device promise and ideal calibrated controls are assumptions of these results. [Related work](../references/RELATED_WORK.md) identifies inherited results and the different operational tasks in nearby literature.
 
 ## Reading route
 
-Read the [construction](exponential_protocol.md), then the [zero-cost obstruction](zero_absorption.md), and then the [rate geometry](rate_geometry.md). The [resource account](resources.md) explains which physical advantages survive the definition of cost. The [verification guide](../verification/README.md) separates finite computational checks from the analytic proofs.
+Read the [construction](exponential_protocol.md), then the [zero-cost obstruction](zero_absorption.md), then the [rate geometry](rate_geometry.md) and [sharp classification](sharp_rates.md). The [resource account](resources.md) explains which physical advantages survive the definition of cost. The [verification guide](../verification/README.md) separates finite computational checks from the analytic proofs.

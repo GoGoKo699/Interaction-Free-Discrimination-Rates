@@ -29,6 +29,7 @@ The default output is a compact pass/fail summary. The optional report contains 
 | Uniform whole-apparatus loss | Four combinations of query count and survival; exact survival/error and distinct sample-loss probability |
 | Known transparent-mode loss | Seven combinations, including transmission above, at and below one half; compensated-schedule output and the model-specific damage bound |
 | Coherent preparation/control errors | N = 4, 8, 12; actual state, error and absorption changes stay inside the norm budget |
+| Safe-action amplification | The original optical pair and a pair with nonorthogonal safe inputs and complex output overlap. The check compares the squared glued norm with the generalized Gram eigenvalue, then reconstructs a common seed and ten common controls on each backward schedule. |
 
 The code labels the two sample polarizations h and v; these are a and b in the scientific account. It builds each common control as two passive rotations and updates the physical density matrix by summing all Kraus terms. The closed-form output states are a separate comparison. The binary measurement assigns a fair guess to vacuum; the Helstrom value is also computed from the full output density matrices.
 
@@ -36,6 +37,6 @@ The sample-transmission parameter and apparatus-transmission parameter describe 
 
 ## Expected result and limits
 
-A successful run reports `all assertions passed`, with 6 ideal, 3 cross-block, 4 uniform-loss, 7 sample-loss and 3 control-perturbation cases. It also reports the largest ideal output-state residual. The tested ideal values are well above the floating-point absorption floor.
+A successful run reports `all assertions passed`, with 6 ideal, 3 cross-block, 4 uniform-loss, 7 sample-loss, 3 control-perturbation and 2 safe-amplification cases. It also reports the largest ideal output-state residual. The tested ideal values are well above the floating-point absorption floor.
 
-These checks do not prove a universal or asymptotic result, establish the optimal exponential base, test arbitrary adaptive controllers, certify laboratory components, or verify literature priority. The exact construction, zero-event induction, general fidelity estimates and fixed-loss converse are established by the written proofs. The suite provides a reproducible implementation check alongside them.
+The finite checks cover the concrete channels and controls above. The written proofs establish the arbitrary-strategy and asymptotic results, including the optimal exponential base for the stated model. The numerical report records seed-event probabilities, common-control residuals and overlap deficits for the two amplification examples.
